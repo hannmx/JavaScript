@@ -4,10 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JSON Data Example</title>
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .grid__content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Семинар 9. -->
+    <div  class="grid__content" id="content"></div>
+        <script src="data.js"></script>
+        <script>
+            const content = document.getElementById('content');
+
+            data.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const img = document.createElement('img');
+                img.src = item.thumbnailUrl;
+                card.appendChild(img);
+
+                const title = document.createElement('h2');
+                title.textContent = item.title;
+                card.appendChild(title);
+
+                const paragraph = document.createElement('p');
+                paragraph.textContent = `ID: ${item.id}, Album ID: ${item.albumId}`;
+                card.appendChild(paragraph);
+
+                content.appendChild(card);
+            });
+        </script>
+
+
     <!-- <script src="./sem1.js"></script> -->
     <!-- <script src="./sem2.js"></script> -->
     <!-- <script src="./sem3.js"></script> -->
