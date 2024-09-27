@@ -1,0 +1,12 @@
+{
+  "name": "my-random-data-lib",
+  "version": "1.0.0",
+  "description": "Get random name, number, password ",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hannmx/JavaScript/blob/main/NodeJS/my-random-data-lib"
+  },
+  "author": "hannmx",
+  "license": "MIT"
+}
